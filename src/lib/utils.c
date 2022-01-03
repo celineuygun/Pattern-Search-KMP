@@ -5,7 +5,7 @@
 #include <errno.h>
 #include "utils.h"
 
-#define BUFFER_SIZE 100
+#define BUFFER_SIZE 1000
 #define FILENAME_SIZE 20
 
 /*
