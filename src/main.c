@@ -26,7 +26,7 @@ int main() {
         printf("\nEntez le texte.\n>> ");
         scanf(" %[^\n]%*c", text);
     }
-    printf("\nEntrez un motif a chercher (caracteres alphabetiques uniquement)\n>> ");
+    printf("\nEntrez un motif a chercher\n>> ");
     fflush(stdin);
     scanf(" %[^\n]%*c", pattern);
 
@@ -99,7 +99,7 @@ int main() {
                     free(alph);
                     alph = NULL;
                 }
-                printf("\nEntrez un motif a chercher (caracteres alphabetiques uniquement)\n>> ");
+                printf("\nEntrez un motif a chercher\n>> ");
                 fflush(stdin);
                 scanf(" %[^\n]%*c", pattern);
                 break;

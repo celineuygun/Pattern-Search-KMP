@@ -34,15 +34,18 @@ void readFile(char **text) {
 }
 
 /*
- * verifie et renvoie 1 si deux caracteres donnes sont la meme lettre
- * renvoie -1 s'il n'est pas alphabetique, 0 s'il ne s'agit pas de la meme lettre
+ * verifie et renvoie 1 si deux caracteres donnes 
+ * sont la meme lettre, sinon renvoie 0
  */
-int isSameLetter(const char ch1, const char ch2) {
+int isSameChar(const char ch1, const char ch2) {
     if(isalpha(ch1) && isalpha(ch2))
         if(ch1 == ch2 || toupper(ch1) == ch2 || toupper(ch2) == ch1)
             return 1;
         else return 0;
-    else return -1;
+    else {
+        if(ch1 == ch2) return 1;
+        else return 0;
+    }
 }
 
 /*

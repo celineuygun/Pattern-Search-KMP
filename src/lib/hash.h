@@ -1,7 +1,7 @@
 #ifndef HASH_H_
 #define HASH_H_
 
-#define ALPHABET_SIZE 26
+#define ALPHABET_SIZE 70
 
 typedef struct key {
     int index;

@@ -8,7 +8,7 @@ int *computePi(char *pattern, int M) {
     int len = 0;
     pi[0] = 0;
     for(int i = 1; i < M; ) {
-        int retVal = isSameLetter(pattern[i], pattern[len]);
+        int retVal = isSameChar(pattern[i], pattern[len]);
         if(retVal == 1) {
             pi[i] = ++len;
             i++;
@@ -31,8 +31,9 @@ ArrDy *originalKMP(char *text, char *pattern) {
     if(!pi) return NULL;
     ArrDy *foundPatterns = createArrDy(1);
     for(int i = 0, j = 0; i < N; ) {
-        int retVal = isSameLetter(text[i], pattern[j]);
+        int retVal = isSameChar(text[i], pattern[j]);
         if(retVal == -1) {
+            j = 0;
             i++;
             continue;
         } else if(retVal == 1) {

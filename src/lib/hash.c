@@ -6,13 +6,14 @@
 #include "../originalKMP.h"
 
 /*
- * fonction de calcul de hachage pour les caracteres alphabetiques
- * renvoie -1 si la caractere donnee n'est pas alphabetique
+ * fonction de calcul de hachage pour des caracteres
+ * renvoie -1 si la caractere donnee n'est pas imprimible
  */
 unsigned long hashCompute(const char ch) {
-    if(ch >= 'A' && ch <= 'Z') return ch - 65;
-    else if(ch >= 'a' && ch <= 'z') return ch - 97;
-    return -1;
+    if(ch >= 32 && ch <= 96) return ch - 32;
+    else if(ch >= 'a' && ch <= 'z') return ch - 64;
+    else if(ch >= 123 && ch <= 126) return ch - 58;
+    else return -1;
 }
 
 /*
@@ -51,6 +52,6 @@ int insertKey(Key **table, char ch, int size) {
             table[hash]->key = ch;
             table[hash]->arr = calloc(size, sizeof(int));
             return 1;
-        } 
-    } return -1;
+        }
+    } return 0;
 }

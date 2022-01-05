@@ -16,7 +16,7 @@
 } while (0)
 
 void readFile(char **text);
-int isSameLetter(const char ch1, const char c2);
+int isSameChar(const char ch1, const char c2);
 char *makeAlphabet(char *str);
 
 #endif

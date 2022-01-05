@@ -12,7 +12,7 @@ Key **computePiTable(int *pi, char *pattern, char *pat_alphabet) {
         unsigned long hash = 0;
         int len = 0;
         while(len < M) {
-            int retVal = isSameLetter(pattern[pi[len]], pat_alphabet[i]);
+            int retVal = isSameChar(pattern[pi[len]], pat_alphabet[i]);
             if(len == 0) {
                 insertKey(tablePi, pat_alphabet[i], M);
                 hash = hashCompute(pat_alphabet[i]);
@@ -40,8 +40,9 @@ ArrDy *optimizedKMP(char *text, char *pattern, char *pat_alphabet) {
     if(!tablePi) return NULL;
     ArrDy *foundPatterns = createArrDy(1);
     for(int i = 0, j = 0; i < N; ) {
-        int retVal = isSameLetter(text[i], pattern[j]);
+        int retVal = isSameChar(text[i], pattern[j]);
         if(retVal == -1) {
+            j = 0;
             i++;
             continue;
         } else if(retVal == 1) {
