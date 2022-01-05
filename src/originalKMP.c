@@ -17,7 +17,7 @@ int *computePi(char *pattern, int M) {
                 pi[i++] = 0;
             else
                 len = pi[len - 1];
-        } else { // si ni l'un ni l'autre ne sont alphabetiques
+        } else { // si ni l'un ni l'autre ne sont imprimibles
             free(pi);
             pi = NULL;
             break;

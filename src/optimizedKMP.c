@@ -24,7 +24,7 @@ Key **computePiTable(int *pi, char *pattern, char *pat_alphabet) {
                     tablePi[hash]->arr[len] = 0;
                 else
                     tablePi[hash]->arr[len] = tablePi[hash]->arr[pi[len] - 1];
-            } else { // si ni l'un ni l'autre ne sont alphabetiques
+            } else { // si ni l'un ni l'autre ne sont imprimibles
                 free(tablePi);
                 tablePi = NULL;
                 break;
