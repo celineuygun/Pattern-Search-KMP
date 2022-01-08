@@ -5,6 +5,7 @@
 /*
  * cree et renvoie un nouveau tableau dynamique
  * avec une capacite donnee (capacity)
+ * complexite temp: O(1)
  */
 ArrDy *createArrDy(int capacity) {
     ArrDy *new = calloc(1, sizeof(ArrDy));
@@ -18,6 +19,7 @@ ArrDy *createArrDy(int capacity) {
 
 /*
  * supprime le tableau dynamique
+ * complexite temp: O(1)
  */
 void deleteArrDy(ArrDy **arrDy) {
     if(!arrDy || !(*arrDy)) return;
@@ -28,6 +30,7 @@ void deleteArrDy(ArrDy **arrDy) {
 
 /*
  * renvoie l'element a l'indice donne (i)
+ * complexite temp: O(1)
  */
 int get(ArrDy *arrDy, int i) {
     if(!arrDy) printf("\nLe tableau dynamique est vide.\n");
@@ -39,6 +42,7 @@ int get(ArrDy *arrDy, int i) {
 /*
  * remplace la valeur d'un element a l'indice donne (i)
  * par la valeur donnee (val)
+ * complexite temp: O(1)
  */
 void set(ArrDy *arrDy, int i, int val) {
     if(!arrDy) printf("\nLe tableau dynamique est vide.\n");
@@ -48,6 +52,7 @@ void set(ArrDy *arrDy, int i, int val) {
 
 /*
  * repousse un element (val) dans le tableau dynamique
+ * complexite temp: O(n)
  */
 void pushBack(ArrDy **arrDy, int val) {
     if(!(*arrDy)) {
@@ -64,6 +69,7 @@ void pushBack(ArrDy **arrDy, int val) {
 
 /*
  * renvoie la taille du tableau dynamique
+ * complexite temp: O(1)
  */
 int getSize(ArrDy *arrDy) {
     if(!arrDy) return -1;
@@ -72,6 +78,7 @@ int getSize(ArrDy *arrDy) {
 
 /*
  * renvoie la capacite du tableau dynamique
+ * complexite temp: O(1)
  */
 int getCapacity(ArrDy *arrDy) {
     if(!arrDy) return -1;
@@ -80,6 +87,7 @@ int getCapacity(ArrDy *arrDy) {
 
 /*
  * imprime le tableau dynamique
+ * complexite temp: O(n)
  */
 void printArrDy(ArrDy *arrDy) {
     if(!arrDy) {

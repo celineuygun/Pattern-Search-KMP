@@ -8,6 +8,7 @@
 /*
  * fonction de calcul de hachage pour des caracteres
  * renvoie -1 si la caractere donnee n'est pas imprimible
+ * complexite temp: O(1)
  */
 unsigned long hashCompute(const char ch) {
     if(ch >= 32 && ch <= 96) return ch - 32;
@@ -20,6 +21,7 @@ unsigned long hashCompute(const char ch) {
  * Cette fonction recherche une cle avec la valeur donnee (ch)
  * Si elle existe, la fonction renvoie la pointeur avec cette cle
  * sinon elle renvoie NULL
+ * complexite temp: O(1)
  */
 Key *hashLookup(Key **table, const char ch) {
     unsigned long hash = hashCompute(ch);
@@ -29,6 +31,7 @@ Key *hashLookup(Key **table, const char ch) {
 
 /*
  * supprime la table de hachage
+ * complexite temp: O(ALPHABET_SIZE)
  */
 void deleteTable(Key **table) {
     if(!table) return;
@@ -42,6 +45,7 @@ void deleteTable(Key **table) {
 
 /*
  * ajoute une nouvelle valeur a la table de hachage
+ * complexite temp: O(1)
  */
 int insertKey(Key **table, char ch, int size) {
     unsigned long hash = hashCompute(ch);

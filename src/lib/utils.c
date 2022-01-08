@@ -10,6 +10,7 @@
 
 /*
  * lit le fichier et enregistre son contenu dans le parametre donne (text)
+ * complexite temp: O(n)
  */
 void readFile(char **text) {
     int lenBuf = 0, first = 1;
@@ -36,6 +37,7 @@ void readFile(char **text) {
 /*
  * verifie et renvoie 1 si deux caracteres donnes 
  * sont la meme lettre, sinon renvoie 0
+ * complexite temp: O(1)
  */
 int isSameChar(const char ch1, const char ch2) {
     if(isalpha(ch1) && isalpha(ch2))
@@ -50,6 +52,7 @@ int isSameChar(const char ch1, const char ch2) {
 
 /*
  * cree et renvoie un ensemble de caracteres avec la chaine donnee (str)
+ * complexite temp: O(len(str)) ~ O(m)
  */
 char *makeAlphabet(char *str) {
     int len = strlen(str);

@@ -22,4 +22,4 @@ objections to the proposition that "machines can think".
 
 Since Turing first introduced his test, it has proven to be both highly influential
 and widely criticised, and it has become an important concept in the philosophy of
-artificial intelligence.~ acaba
+artificial intelligence.
