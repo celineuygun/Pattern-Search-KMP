@@ -35,9 +35,9 @@ int main() {
         printf("[0] Quitter\n");
         printf("[1] Afficher le texte\n");
         printf("[2] Afficher le motif\n");
-        printf("[3] Rechercher le motif dans un document avec l'algorithme KMP\n");
-        printf("[4] Rechercher le motif dans un document avec l'algorithme KMP optimise en temps reel\n");
-        printf("[5] Comparer les temps d'exécution des deux algorithmes\n");
+        printf("[3] Rechercher le motif dans le document avec l'algorithme KMP\n");
+        printf("[4] Rechercher le motif dans le document avec l'algorithme KMP optimise en temps reel\n");
+        printf("[5] Comparer les temps d'execution des deux algorithmes\n");
         printf("[6] Faire une nouvelle entree de donnees\n");
         printf("[7] Entrer une nouvelle motif a chercher\n>> ");
         scanf(" %d", &response);
@@ -73,7 +73,7 @@ int main() {
                 break;
             
             case 5:
-                printf("\nCombien de fois voulez-vous répéter l'exécution des algorithmes?\n>> ");
+                printf("\nCombien de fois voulez-vous repeter l'execution des algorithmes?\n>> ");
                 scanf(" %d", &rep);
                 if(!alph) alph = makeAlphabet(pattern);
                 printf("\n");

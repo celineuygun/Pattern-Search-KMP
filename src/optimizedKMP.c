@@ -41,7 +41,7 @@ ArrDy *optimizedKMP(char *text, char *pattern, char *pat_alphabet) {
     ArrDy *foundPatterns = createArrDy(1);
     for(int i = 0, j = 0; i < N; ) {
         int retVal = isSameChar(text[i], pattern[j]);
-        if(retVal == -1) {
+        if(retVal == -1) { // si ni l'un ni l'autre ne sont imprimibles
             j = 0;
             i++;
             continue;
