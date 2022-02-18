@@ -83,7 +83,7 @@ KMP et bon en pratique.
 
 ## 5. Références
 ```
-http://www.iro.umontreal.ca/~hamelsyl/RechercheExacte.pdf
-https://www.geeksforgeeks.org/real-time-optimized-kmp-algorithm-for-pattern-searching/
-https://fr.acervolima.com/algorithme-kmp-optimise-en-temps-reel-pour-la-recherche-de-modeles/
+[1] http://www.iro.umontreal.ca/~hamelsyl/RechercheExacte.pdf
+[2] https://www.geeksforgeeks.org/real-time-optimized-kmp-algorithm-for-pattern-searching/
+[3] https://fr.acervolima.com/algorithme-kmp-optimise-en-temps-reel-pour-la-recherche-de-modeles/
 
